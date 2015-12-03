@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-faded">
+  <a v-link="{name: 'home'}" class="navbar-brand">Vue.jsとTypeScriptのサンプル</a>
+  <ul class="nav navbar-nav">
+    <li class="nav-item" :class="{active: active === 'links'}">
+      <a v-link="{name: 'links'}" class="nav-link">リンク</a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav pull-right">
+    <li class="nav-item" :class="{active: active === 'settings'}">
+      <a v-link="{name: 'settings'}" class="nav-link">設定</a>
+    </li>
+  </ul>
+</nav>

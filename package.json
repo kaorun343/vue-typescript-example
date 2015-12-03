@@ -1,0 +1,27 @@
+{
+  "name": "vue-typescript-example",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^1.0.10",
+    "vue-class-component": "^2.0.0",
+    "vue-router": "^0.7.7"
+  },
+  "devDependencies": {
+    "html-loader": "^0.3.0",
+    "jasmine": "^2.3.2",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-jasmine": "^0.3.6",
+    "ts-loader": "^0.7.1",
+    "typescript": "^1.7.3",
+    "webpack": "^1.12.6"
+  }
+}

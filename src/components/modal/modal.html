@@ -1,0 +1,21 @@
+<div class="modal fade" tabindex="-1" role="dialog" v-el:modal>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <slot name="header">
+          <button class="close" type="button" aria-label="Close" @click="close">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title" v-text="title"></h4>
+        </slot>
+      </div>
+      <div class="modal-body">
+        <slot name="body"></slot>
+      </div>
+      <div class="modal-footer">
+        <slot name="footer"></slot>
+      </div>
+    </div>
+  </div>
+</div>

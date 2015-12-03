@@ -1,0 +1,14 @@
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>リンク</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="link in links">
+        <td><a :href="link.url" v-text="link.title"></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

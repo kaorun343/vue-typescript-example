@@ -1,0 +1,36 @@
+<div>
+  <div class="jumbotron">
+    <h1 class="display-3">Happy Birthday!!</h1>
+    <p class="lead">12月4日は惣流・アスカ・ラングレーの誕生日です。</p>
+    <hr class="m-y-md">
+    <p><span v-if="!isToday">今日は{{today}}ですが</span>メッセージを書いてみましょう</p>
+    <p class="lead">
+      <button class="btn btn-primary btn-lg" @click="open">メッセージを書く</button>
+    </p>
+  </div>
+
+  <h2>これまでに寄せられたメッセージ</h2>
+  <table class="table">
+    <thead>
+      <tr><th>日時</th><th>メッセージ</th><th>削除</th></tr>
+    </thead>
+    <tbody>
+      <tr v-for="message in messages">
+        <td v-text="message.date"></td>
+        <td v-text="message.text"></td>
+        <td><button type="button" class="btn btn-secondary btn-sm" @click="remove(message)">削除する</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <modal title="メッセージを書く" :is-open="isOpen">
+    <div class="form-group" slot="body">
+      <label for="message">メッセージを書く</label>
+      <input type="text" class="form-control" name="message" id="message" v-model="message" placeholder="ここにメッセージを書く">
+    </div>
+    <div slot="footer">
+      <button class="btn btn-secondary" @click="close">閉じる</button>
+      <button class="btn btn-primary" @click="save">保存する</button>
+    </div>
+  </modal>
+</div>
