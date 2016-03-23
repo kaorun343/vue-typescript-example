@@ -1,12 +1,17 @@
 "use strict"
-import VueComponent = require('vue-class-component')
-import { prop, watch } from '../../decorators'
+import Component from 'vue-class-component';
 
-@VueComponent
-export class Navbar {
-  static template = require('./navbar.html')
+@Component({
+    template: require('./navbar.html'),
+    props: {
+        active: {
+            type: String,
+            default: ""
+        }
+    }
+})
+export default class Navbar {
 
-  @prop({type: String, default: ""})
-  public active: string
+    public active: string
 
 }

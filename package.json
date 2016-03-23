@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "vue": "^1.0.10",
-    "vue-class-component": "^2.0.0",
+    "vue-class-component": "^3.2.0",
     "vue-router": "^0.7.7"
   },
   "devDependencies": {
@@ -21,7 +21,7 @@
     "karma-chrome-launcher": "^0.2.1",
     "karma-jasmine": "^0.3.6",
     "ts-loader": "^0.7.1",
-    "typescript": "^1.7.3",
+    "typescript": "^1.8.9",
     "webpack": "^1.12.6"
   }
 }

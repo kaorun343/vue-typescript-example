@@ -1,30 +1,30 @@
 "use strict"
-import VueComponent = require('vue-class-component')
-import { prop, watch } from '../../decorators'
-import { storageKey } from '../../constants'
+import Component from 'vue-class-component';
+import { storageKey } from '../../constants';
 
-@VueComponent
-export class Settings {
-  static template = require('./settings.html')
+@Component({
+    template: require('./settings.html'),
+    route: {
+        data(transition: vuejs.Transition<any, any, any, any, any>) {
+            transition.next({
+                status: false
+            });
+        }
+    }
+})
+export default class Settings {
 
-  status: boolean
+  status: boolean;
 
   data() {
     return {
       status: false
-    }
+    };
   }
 
   remove() {
-    localStorage.removeItem(storageKey)
-    this.status = true
+    localStorage.removeItem(storageKey);
+    this.status = true;
   }
 
-  static route = {
-    data: function(transition: VueRouter.Transition<any, any, any, any, any>) {
-      transition.next({
-        status: false
-      })
-    }
-  }
 }

@@ -1,28 +1,37 @@
 "use strict"
-import VueComponent = require('vue-class-component')
-import { prop, watch } from '../../decorators'
+import Component from 'vue-class-component';
 
-@VueComponent
-export class Modal {
+@Component({
+    template: require('./modal.html'),
+    props: {
+        isOpen: {
+            type: Boolean,
+            default: false
+        },
+        title: {
+            type: String,
+            default: ""
+        }
+    },
+    watch: {
+        isOpen: 'onChange'
+    }
+})
+export default class Modal {
 
-  static template = require('./modal.html')
+    isOpen: boolean
 
-  @prop({type: Boolean, default: false})
-  isOpen: boolean
+    title: string
 
-  @prop({type: String, default: ""})
-  title: string
+    $els: {
+        modal: HTMLElement
+    }
 
-  $els: {
-    modal: HTMLElement
-  }
+    onChange(value: boolean) {
+        $(this.$els.modal).modal(value ? 'show' : 'hide')
+    }
 
-  @watch('isOpen')
-  onChange(value: boolean) {
-    $(this.$els.modal).modal(value ? 'show': 'hide')
-  }
-
-  close() {
-    this.isOpen = false
-  }
+    close() {
+        this.isOpen = false
+    }
 }

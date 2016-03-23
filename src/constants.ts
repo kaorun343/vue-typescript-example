@@ -1,1 +1,1 @@
-export const storageKey = "vue-typescript-example"
+export const storageKey = "vue-typescript-example";

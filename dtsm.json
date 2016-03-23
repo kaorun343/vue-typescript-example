@@ -13,9 +13,6 @@
     }
   },
   "dependencies": {
-    "es6-promise/es6-promise.d.ts": {
-      "ref": "715df764419937a75a25dcd76bfc954157bc7b96"
-    },
     "node/node.d.ts": {
       "ref": "78d36dd49b6b55b9fdfe61776a12bf05c8b07777"
     },
@@ -24,6 +21,12 @@
     },
     "bootstrap/bootstrap.d.ts": {
       "ref": "78d36dd49b6b55b9fdfe61776a12bf05c8b07777"
+    },
+    "vue/vue.d.ts": {
+      "ref": "b14601af3fb2ad72d5048e94188a569a1838fb9c"
+    },
+    "vue-router/vue-router.d.ts": {
+      "ref": "b14601af3fb2ad72d5048e94188a569a1838fb9c"
     }
   }
 }

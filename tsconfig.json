@@ -14,34 +14,7 @@
         "preserveConstEnums": true,
         "suppressImplicitAnyIndexErrors": true
     },
-    "filesGlob": [
-        "**/*.ts",
-        "**/*.tsx",
-        "!node_modules/**"
-    ],
-    "files": [
-        "src/app.ts",
-        "src/components/home/home.ts",
-        "src/components/links/links.ts",
-        "src/components/modal/modal.ts",
-        "src/components/navbar/navbar.ts",
-        "src/components/settings/settings.ts",
-        "src/constants.ts",
-        "src/decorators.ts",
-        "src/index.ts",
-        "src/route-config.ts",
-        "src/typings/vue-class-component.d.ts",
-        "src/typings/vue-resource.d.ts",
-        "src/typings/vue-router.d.ts",
-        "src/typings/vue.d.ts",
-        "typings/bootstrap/bootstrap.d.ts",
-        "typings/bundle.d.ts",
-        "typings/es6-promise/es6-promise.d.ts",
-        "typings/jquery/jquery.d.ts",
-        "typings/node/node.d.ts"
-    ],
-    "compileOnSave": false,
-    "atom": {
-        "rewriteTsconfig": true
-    }
+    "exclude": [
+        "node_modules"
+    ]
 }
