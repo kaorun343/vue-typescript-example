@@ -1,6 +1,8 @@
 "use strict"
 import Component from 'vue-class-component';
 
+export interface Navbar extends vuejs.Vue { }
+
 @Component({
     template: require('./navbar.html'),
     props: {
@@ -10,7 +12,7 @@ import Component from 'vue-class-component';
         }
     }
 })
-export default class Navbar {
+export class Navbar {
 
     public active: string
 

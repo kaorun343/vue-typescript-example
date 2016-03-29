@@ -1,7 +1,9 @@
 "use strict";
 import Component from 'vue-class-component';
-import Modal from '../modal/modal';
+import {Modal} from '../modal/modal';
 import { storageKey } from '../../constants';
+
+export interface Home extends vuejs.Vue { }
 
 @Component({
     template: require('./home.html'),
@@ -19,7 +21,7 @@ import { storageKey } from '../../constants';
         }
     }
 })
-export default class Home {
+export class Home {
 
     year: number;
     month: number;

@@ -1,7 +1,7 @@
 "use strict"
 import Vue = require('vue');
 import VueRouter = require('vue-router');
-import App from './app';
+import {App} from './app';
 import { configureRouter } from './route-config';
 
 Vue.use(VueRouter);

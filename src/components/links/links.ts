@@ -1,10 +1,12 @@
 "use strict"
 import Component from 'vue-class-component';
 
+export interface Links extends vuejs.Vue { }
+
 @Component({
     template: require('./links.html')
 })
-export default class Links {
+export class Links {
 
     links: { title: string; url: string }[];
 
